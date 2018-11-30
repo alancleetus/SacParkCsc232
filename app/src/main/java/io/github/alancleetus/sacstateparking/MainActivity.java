@@ -179,7 +179,8 @@ public class MainActivity extends AppCompatActivity {
 
 
             }
-        }).name("realm.db").deleteRealmIfMigrationNeeded().build();
+        }).name("realm.realm").build();
+        Realm.removeDefaultConfiguration();
         Realm.setDefaultConfiguration(config);
 
         createSpinner(R.id.highLowSpinner, R.array.highLow);
@@ -222,7 +223,6 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra(EXTRA_LOT_NUMBER_TEXT, lotNumberText);
 
         startActivity(intent);
-
     }
 
     public void openSearchResultsActivity()
@@ -238,7 +238,6 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra(EXTRA_LOT_STRUCT_TEXT, lotTypeText);
 
         startActivity(intent);
-
     }
 
 
