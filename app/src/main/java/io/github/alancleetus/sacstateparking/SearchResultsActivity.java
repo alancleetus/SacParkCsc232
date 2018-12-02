@@ -44,12 +44,12 @@ public class SearchResultsActivity extends AppCompatActivity {
 		RealmQuery<ParkingStructure> query = realm.where(ParkingStructure.class);
 
 		/*acend desc logic is reversed because i cant figure out how to add things to end of linear layout */
-		query.sort((spotType.equals("any"))? "spotsLeft":spotType, (orderBy.charAt(0)=='a')? Sort.DESCENDING : Sort.ASCENDING);
+		query.sort((spotType.equals("any"))? "spotsLeft":spotType, (orderBy.charAt(0)=='l')? Sort.DESCENDING : Sort.ASCENDING);
 		RealmResults<ParkingStructure> ps = query.findAll();
 
 		RealmQuery<ParkingLot> query2 = realm.where(ParkingLot.class);
 		/*acend desc logic is reversed because i cant figure out how to add things to end of linear layout */
-		query2.sort((spotType.equals("any"))? "spotsLeft":spotType, (orderBy.charAt(0)=='a')? Sort.DESCENDING : Sort.ASCENDING);
+		query2.sort((spotType.equals("any"))? "spotsLeft":spotType, (orderBy.charAt(0)=='l')? Sort.DESCENDING : Sort.ASCENDING);
 		RealmResults<ParkingLot> pl = query2.findAll();
 
 		realm.commitTransaction();

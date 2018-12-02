@@ -2,8 +2,8 @@
     <string name="app_name">Sac State Parking</string>
 
     <string-array name="highLow">
-        <item>descending</item>
-        <item>ascending</item>
+        <item>high to low</item>
+        <item>low to high</item>
     </string-array>
 
     <string-array name="lotStruct">
